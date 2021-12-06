@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeff de Lara / Software Engineer / Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <main>
+        <section id="hero">
+            <div class="container center">
+                <h1>Hi. I'm Jeff.</h1>
+                <h2 class="hl">Software Engineer</h2>
+
+                <p class="subtitle">BS Computer Engineering graduate of Mapua Institute of Technology. Technical proficiencies include Ruby on Rails, PHP, Python, HTML/CSS, Javascript, ReactJS.</p>
+                
+                <div class="socials mt-2">
+                    <a href="https://jeffreydelara.com/" title="Website" target="_blank"><i class='bx bx-link' ></i></a>
+                    <a href="https://github.com/jeffdelara" title="Github" target="_blank"><i class='bx bxl-github'></i></a> 
+                    <a href="https://www.linkedin.com/in/jeffreydelara/" title="LinkedIn" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
+                </div>
+            </div>
+        </section>
+        <div class="spacer"></div>
+        <section id="works">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="work-grid mt-2">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="https://jeffreydelara.com/" title="Website" target="_blank"><i class='bx bx-link' ></i></a>
+            <a href="https://github.com/jeffdelara" target="_blank"><i class='bx bxl-github'></i></a> 
+            <a href="https://www.linkedin.com/in/jeffreydelara/" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
+        </div>
+        <div class="mt">
+            &copy; 2021 All rights reserved. 
+        </div>
+    </footer>
+<script>
+    const works = [
+        {
+            image: 'images/vipinvestment.png', 
+            title: 'VIP Partnership',
+            description: 'Investment Management System built with Ruby on Rails for managing investments for different clients. More details on code repo README.',
+            codeUrl: 'https://github.com/jeffdelara/vip-investment',
+            codeDemo: 'http://vip-partnership.herokuapp.com/'
+        },
+        {
+            image: 'images/howtoinvest.png', 
+            title: 'How to Invest for Beginners',
+            description: 'A learning management system, payment processing with Paymongo and virtual stock trading game.',
+            codeUrl: false,
+            codeDemo: 'https://howtoinvestforbeginners.com/'
+        },
+        {
+            image: 'images/mozo.png', 
+            title: 'Mozo Video Conference App',
+            description: 'Mozo is a real-time video conferencing app. App is hosted on Heroku, please allow a few seconds for the site to spin up.',
+            codeUrl: 'https://github.com/jeffdelara/mozo',
+            codeDemo: 'https://mozoapp.herokuapp.com/'
+        },
+        {
+            image: 'images/banking-2.png', 
+            title: 'Banking App ReactJS',
+            description: 'A banking app created with Reactjs. To test the app: admin@admin.com/abc123 and client@client.com/abc123',
+            codeUrl: 'https://github.com/jeffdelara/banking-app',
+            codeDemo: 'https://jeffdelara.github.io/banking-app/'
+        },
+        {
+            image: 'images/momentum.png', 
+            title: 'Momentum App',
+            description: 'Get your focus ready with the Momentum App. It also features a built in Todo list and random quotes API.',
+            codeUrl: 'https://github.com/jeffdelara/momentum-app',
+            codeDemo: 'https://momentum-jeffdelara.netlify.app/'
+        },
+        {
+            image: 'images/landing-page.png', 
+            title: 'Burger King Landing Page',
+            description: 'A mobile friendly / responsive landing page for Burger King. Created using HTML/CSS and Javascript.',
+            codeUrl: 'https://github.com/jeffdelara/batch13-fe-activities/tree/main/landingpage',
+            codeDemo: 'https://jeffdelara.github.io/batch13-fe-activities/landingpage/'
+        },
+        {
+            image: 'images/chessgame.png', 
+            title: 'Chess Game',
+            description: 'A complete chess game with all the rules of chess created in HTML/CSS and Javascript.', 
+            codeUrl: 'https://github.com/jeffdelara/chessgame',
+            codeDemo: 'https://chessgame-jeffdelara.netlify.app/'
+        },
+        {
+            image: 'images/tetris.png', 
+            title: 'Tetris Game',
+            description: 'A complete, fun game of Tetris built with vanilla JS and Canvas API.', 
+            codeUrl: 'https://github.com/jeffdelara/tetris',
+            codeDemo: 'https://tetris-jeffdelara.netlify.app/'
+        },
+        {
+            image: 'images/tictactoe.png', 
+            title: 'Tic Tac Toe Unbeatable AI',
+            description: 'A tictactoe game with an Unbeatable AI that uses minmax algorithm and binary trees to win.', 
+            codeUrl: 'https://github.com/jeffdelara/tictactoe',
+            codeDemo: 'https://tictactoe-jeffdelara.netlify.app/'
+        },
+        {
+            image: 'images/gol.png', 
+            title: 'Game of Life',
+            description: 'Based on John Conway\'s game of life recreated using HTML/CSS and Javascript.', 
+            codeUrl: 'https://github.com/jeffdelara/game-of-life',
+            codeDemo: 'https://gameoflife-jeffdelara.netlify.app/'
+        },
+    ];
+
+    const workGrid = document.querySelector('.work-grid');
+    works.forEach( work => {
+        const workItem = document.createElement('div');
+        workItem.className = 'work-item';
+        let codeLink = `<a target="_blank" href="${work.codeUrl}"><i class='bx bxl-github' ></i> Code</a> </div>`;
+        
+        if(work.codeUrl === false) {
+            codeLink = `<div class="private"><i class='bx bx-lock-alt'></i> Code is private</div>`;
+        }
+
+        workItem.innerHTML = `
+        <img src="${work.image}" alt="">
+        <h3>${work.title}</h3>
+        <div class="description">${work.description}</div>
+        <div class="mt work-links">
+            <a target="_blank" href="${work.codeDemo}"><i class='bx bx-link-external' ></i> Live</a> 
+            ${codeLink} 
+        `;
+        workGrid.append(workItem);
+    });
+</script>
+</body>
+</html>
