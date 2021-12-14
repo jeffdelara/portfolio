@@ -21,6 +21,7 @@
                     <a href="https://jeffreydelara.com/" title="Website" target="_blank"><i class='bx bx-link' ></i></a>
                     <a href="https://github.com/jeffdelara" title="Github" target="_blank"><i class='bx bxl-github'></i></a> 
                     <a href="https://www.linkedin.com/in/jeffreydelara/" title="LinkedIn" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
+                    <a href="http://twitter.com/jeffdlara" title="Twitter" target="_blank"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
         </section>
@@ -39,6 +40,7 @@
             <a href="https://jeffreydelara.com/" title="Website" target="_blank"><i class='bx bx-link' ></i></a>
             <a href="https://github.com/jeffdelara" target="_blank"><i class='bx bxl-github'></i></a> 
             <a href="https://www.linkedin.com/in/jeffreydelara/" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
+            <a href="http://twitter.com/jeffdlara" title="Twitter" target="_blank"><i class='bx bxl-twitter'></i></a>
         </div>
         <div class="mt">
             &copy; 2021 All rights reserved. 
@@ -129,12 +131,17 @@
         }
 
         workItem.innerHTML = `
-        <img src="${work.image}" alt="">
-        <h3>${work.title}</h3>
-        <div class="description">${work.description}</div>
-        <div class="mt work-links">
-            <a target="_blank" href="${work.codeDemo}"><i class='bx bx-link-external' ></i> Live</a> 
-            ${codeLink} 
+        <a href="${work.codeDemo}" class="img-link" target="_blank">
+            <img src="${work.image}" alt="${work.title}">
+        </a>
+        <div class="work-container">
+            <h3>${work.title}</h3>
+            <div class="description">${work.description}</div>
+            <div class="mt work-links">
+                <a target="_blank" href="${work.codeDemo}"><i class='bx bx-link-external' ></i> Live</a> 
+                ${codeLink} 
+            </div>
+        </div>
         `;
         workGrid.append(workItem);
     });
