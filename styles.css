@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
 
 :root {
-    --font-family: 'Inter', sans-serif;
+    --font-family: 'Fira Sans', sans-serif;
     --first-color: #1e3d59;
     /* --first-color: #0d263b; */
     --grey-color: rgba(245, 240, 225, 1);
@@ -80,7 +80,7 @@ h2 {
 h3 {
     font-size: 1.5rem;
     font-weight: normal;
-    letter-spacing: -1px;
+    /* letter-spacing: -1px; */
 
 }
 
@@ -332,4 +332,10 @@ section#hero h1 {
 
 .work-item a.img-link:hover {
     background-color: var(--secondary-color);
+}
+
+.dl {
+    background-color: rgba(118, 151, 180, .2);
+    display: inline-block;
+    padding: 0.5rem 1rem;
 }
