@@ -165,8 +165,8 @@ a:hover {
 }
 /* ID */
 section#hero {
-    height: 40vh;
-    padding-top: 50px;
+    /* height: 40vh; */
+    padding-top: 100px;
     background-color: #001220;
 }
 
