@@ -1,130 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="system">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeff de Lara / Software Engineer / Full Stack Developer</title>
+    <title>Jeff de Lara — Software Engineer</title>
+    <meta name="description" content="Skilled and hardworking software engineer. Adept for innovation and learning. Always strives for excellence.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <main>
-        <section id="hero">
-            <div class="container center">
-                <h1>Hi. I'm Jeff.</h1>
-                <h2 class="hl">Software Engineer</h2>
 
-                <p class="subtitle">B.S. Computer Engineering graduate of Mapúa Institute of Technology. Technical proficiencies include Ruby on Rails, PHP, Python, HTML/CSS, Javascript, Reactjs.</p>
-                
-                <!-- <p><a class="dl" href="https://drive.google.com/file/d/1Znz5ZYocQ9F3C8kDQ2zzA0kxMPo29INU/view?usp=sharing" target="_blank"><i class='bx bx-download'></i> download resume</a></p> -->
+    <!-- Sidebar (desktop) -->
+    <nav class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-inner">
+            <div class="sidebar-brand">
+                <span class="mono-label">jeffreydelara</span>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="#hero" class="sidebar-link active"><span class="sidebar-arrow">→</span> home</a></li>
+                <li><a href="#profile" class="sidebar-link"><span class="sidebar-arrow">→</span> profile</a></li>
+                <li><a href="#experience" class="sidebar-link"><span class="sidebar-arrow">→</span> experience</a></li>
+                <li><a href="#featured" class="sidebar-link"><span class="sidebar-arrow">→</span> featured</a></li>
+                <li><a href="#education" class="sidebar-link"><span class="sidebar-arrow">→</span> education</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon-light">☀</span>
+                    <span class="theme-icon-dark">☾</span>
+                    <span class="theme-icon-system">◎</span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-                <div class="socials mt-2">
-                    <a href="https://jeffreydelara.com/" title="Website" target="_blank"><i class='bx bx-link' ></i></a>
-                    <a href="https://github.com/jeffdelara" title="Github" target="_blank"><i class='bx bxl-github'></i></a> 
-                    <!-- <a href="https://www.linkedin.com/in/jeffreydelara/" title="LinkedIn" target="_blank"><i class='bx bxl-linkedin-square' ></i></a> -->
-                    <a href="http://twitter.com/jeffdlara" title="Twitter" target="_blank"><i class='bx bxl-twitter'></i></a>
+    <!-- Mobile top bar -->
+    <header class="topbar">
+        <span class="topbar-brand mono-label">jeffreydelara</span>
+        <button class="topbar-menu-btn" id="menuToggle" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Mobile overlay menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <ul class="mobile-nav">
+                <li><a href="#hero" class="mobile-link">home</a></li>
+                <li><a href="#profile" class="mobile-link">profile</a></li>
+                <li><a href="#experience" class="mobile-link">experience</a></li>
+                <li><a href="#featured" class="mobile-link">featured</a></li>
+                <li><a href="#education" class="mobile-link">education</a></li>
+            </ul>
+            <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon-light">☀</span>
+                <span class="theme-icon-dark">☾</span>
+                <span class="theme-icon-system">◎</span>
+            </button>
+        </div>
+    </div>
+
+    <main class="content">
+        <!-- Hero -->
+        <section id="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <span class="section-label mono-label">01 — home</span>
+                <div class="hero-header entrance">
+                    <img src="images/avatar.png" alt="Jeff de Lara" class="hero-avatar">
+                    <div>
+                        <h1 id="hero-title" class="page-title">jeffrey de lara</h1>
+                        <p class="hero-subtitle">builder</p>
+                    </div>
+                </div>
+                <p class="hero-desc entrance">Software engineer & founder of Unisoft Ventures Corporation. Building payment infrastructure and SaaS platforms.</p>
+                <div class="hero-contact entrance">
+                    <a href="mailto:jeffreytdelara@gmail.com" class="contact-link external">jeffreytdelara@gmail.com</a>
+                    <a href="https://github.com/jeffdelara" class="contact-link external" target="_blank" rel="noopener">github</a>
+                    <a href="https://www.linkedin.com/in/jeffreydelara/" class="contact-link external" target="_blank" rel="noopener">linkedin</a>
+                    <a href="https://blog.unisoftventures.com" class="contact-link external" target="_blank" rel="noopener">BLOG</a>
                 </div>
             </div>
         </section>
-        <div class="spacer"></div>
-        <section id="works">
+
+        <!-- Profile -->
+        <section id="profile" aria-labelledby="profile-title">
             <div class="container">
-                <h2>Projects</h2>
-                <div class="work-grid mt-2">
+                <span class="section-label mono-label">01 — profile</span>
+                <h2 id="profile-title" class="entrance">About</h2>
+                <div class="card entrance">
+                    <div class="card-inner">
+                        <p class="longform">Software engineer with 10+ years of experience building scalable fintech and SaaS solutions. Founder of Unisoft Ventures Corporation, where we help businesses leverage technology to grow faster and work smarter.</p>
+                        <p class="longform" style="margin-top: 0.75rem;">Passionate about clean architecture, developer experience, and products that make a real impact. Currently focused on payment infrastructure and unified communication platforms.</p>
+                        <div class="profile-meta">
+                            <div class="meta-item">
+                                <span class="mono-label">Contact</span>
+                                <span class="meta-value">+63 905 531 0560</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="mono-label">Email</span>
+                                <span class="meta-value"><a href="mailto:jeffreytdelara@gmail.com">jeffreytdelara@gmail.com</a></span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="mono-label">Location</span>
+                                <span class="meta-value">Philippines</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" aria-labelledby="experience-title">
+            <div class="container">
+                <span class="section-label mono-label">02 — experience</span>
+                <h2 id="experience-title" class="entrance">Experience</h2>
+
+                <div class="timeline">
+                    <article class="timeline-item card entrance">
+                        <div class="card-inner">
+                            <div class="timeline-header">
+                                <div class="timeline-header-content">
+                                    <div class="company-logo">
+                                        <img src="images/paymongo-logo.png" alt="PayMongo" class="company-logo-img">
+                                    </div>
+                                    <div>
+                                        <h3 class="timeline-role">Senior Software Engineer to Tech Lead</h3>
+                                        <span class="timeline-company">PayMongo</span>
+                                    </div>
+                                </div>
+                                <span class="mono-label timeline-date">Mar 2023 — 2025</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Led a high-performing Treasury team managing inward and outward payments via Instapay and Pesonet — processing over <strong>₱1 Billion annually</strong></li>
+                                <li>Architected and delivered the Instapay API, enabling real-time fund transfers for thousands of merchants across the Philippines</li>
+                                <li>Spearheaded the Pesonet transfer service development, expanding PayMongo's payment rails for enterprise clients</li>
+                                <li>Designed the Global Transfers API architecture, positioning the company for international money transfer capabilities</li>
+                                <li>Drove technical decisions on system reliability, scalability, and security for payment-critical infrastructure</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item card entrance">
+                        <div class="card-inner">
+                            <div class="timeline-header">
+                                <div class="timeline-header-content">
+                                    <div class="company-logo company-logo-fallback">A</div>
+                                    <div>
+                                        <h3 class="timeline-role">Software Engineer</h3>
+                                        <span class="timeline-company">Advance Tech Lending</span>
+                                    </div>
+                                </div>
+                                <span class="mono-label timeline-date">Mar 2022 — Feb 2023</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Built and maintained Ruby on Rails backend services powering the finance department's reporting and analytics pipeline</li>
+                                <li>Developed full-stack features using ReactJS for web and React Native for mobile, delivering seamless cross-platform experiences</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item card entrance">
+                        <div class="card-inner">
+                            <div class="timeline-header">
+                                <div class="timeline-header-content">
+                                    <div class="company-logo">
+                                        <img src="images/iripple-logo.png" alt="iRipple" class="company-logo-img">
+                                    </div>
+                                    <div>
+                                        <h3 class="timeline-role">Senior Software Engineer</h3>
+                                        <span class="timeline-company">iRipple Inc</span>
+                                    </div>
+                                </div>
+                                <span class="mono-label timeline-date">Jan 2021 — Mar 2022</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Maintained and enhanced a legacy Ruby on Rails application serving enterprise retail clients across the Philippines</li>
+                                <li>Led the modernization of developer onboarding and local development setup using Docker containerization, reducing setup time from days to minutes</li>
+                                <li>Managed production deployments, server monitoring, and infrastructure reliability for high-traffic retail systems</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item card entrance">
+                        <div class="card-inner">
+                            <div class="timeline-header">
+                                <div class="timeline-header-content">
+                                    <div class="company-logo company-logo-fallback">F</div>
+                                    <div>
+                                        <h3 class="timeline-role">Freelance Developer</h3>
+                                        <span class="timeline-company">Self-employed</span>
+                                    </div>
+                                </div>
+                                <span class="mono-label timeline-date">Jan 2016 — Jan 2021</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Led a cross-functional team of designers and developers, delivering client projects on time and within scope</li>
+                                <li>Built high-converting marketing pages and lead capture websites using Ruby on Rails, PHP, and PostgreSQL</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item card entrance">
+                        <div class="card-inner">
+                            <div class="timeline-header">
+                                <div class="timeline-header-content">
+                                    <div class="company-logo company-logo-fallback">C</div>
+                                    <div>
+                                        <h3 class="timeline-role">Coding Instructor</h3>
+                                        <span class="timeline-company">Self-employed</span>
+                                    </div>
+                                </div>
+                                <span class="mono-label timeline-date">Jan 2013 — Jan 2016</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Taught web development to beginners with zero programming background — 90% of students landed tech jobs after the course</li>
+                                <li>Designed a hands-on, practice-based curriculum in Ruby on Rails, PHP, and MySQL that culminated in student capstone projects</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured -->
+        <section id="featured" aria-labelledby="featured-title">
+            <div class="container">
+                <span class="section-label mono-label">03 — featured</span>
+                <h2 id="featured-title" class="entrance">Featured Work</h2>
+
+                <article class="featured-card card entrance">
+                    <div class="card-inner featured-inner">
+                        <div class="featured-header">
+                            <div class="featured-thumb">
+                                <img src="images/unisms-logo.svg" alt="UniSMS" class="featured-thumb-img">
+                            </div>
+                            <div>
+                                <div class="featured-badge mono-label">UniSMS</div>
+                                <h3 class="featured-heading">Simple and Powerful SMS API</h3>
+                            </div>
+                        </div>
+                        <p class="longform">A unified platform for transactional OTP, reminders, and SMS marketing. Handles all messaging needs without having to integrate with different providers separately.</p>
+                        <div class="featured-tags">
+                            <span class="tag tag-featured">OTP</span>
+                            <span class="tag tag-featured">Reminders</span>
+                            <span class="tag tag-featured">SMS Marketing</span>
+                            <span class="tag">SaaS</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="https://unismsapi.com" class="featured-link" target="_blank" rel="noopener">Visit Platform ↗</a>
+                            <a href="https://unisoftventures.com" class="featured-link" target="_blank" rel="noopener">Unisoft Ventures ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <h3 class="subsection-title entrance">Other Projects</h3>
+                <div class="projects-grid">
+                    <article class="project-card card entrance">
+                        <div class="card-inner">
+                            <div class="project-header">
+                                <img src="images/cashflow-monitor.png" alt="Cashmon.ph" class="project-thumb">
+                                <span class="mono-label">Cashmon.ph</span>
+                            </div>
+                            <p class="project-desc">Cashflow monitoring app for tracking income and expenses. Built with Ruby on Rails, Tailwind CSS, and Stimulus.js.</p>
+                            <div class="project-links">
+                                <a href="https://www.cashmon.ph/" target="_blank" rel="noopener">Live ↗</a>
+                                <a href="https://github.com/jeffdelara/cashmon" target="_blank" rel="noopener">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card entrance">
+                        <div class="card-inner">
+                            <div class="project-header">
+                                <img src="images/howtoinvest.png" alt="How to Invest" class="project-thumb">
+                                <span class="mono-label">How to Invest</span>
+                            </div>
+                            <p class="project-desc">A learning management system with payment processing via PayMongo, Mailjet API, and virtual stock trading game.</p>
+                            <div class="project-links">
+                                <a href="https://howtoinvestforbeginners.com/" target="_blank" rel="noopener">Live ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card entrance">
+                        <div class="card-inner">
+                            <div class="project-header">
+                                <img src="images/mozo.png" alt="Mozo" class="project-thumb">
+                                <span class="mono-label">Mozo</span>
+                            </div>
+                            <p class="project-desc">Real-time video conferencing app built with WebRTC. Hosted on Heroku.</p>
+                            <div class="project-links">
+                                <a href="https://mozoapp.herokuapp.com/" target="_blank" rel="noopener">Live ↗</a>
+                                <a href="https://github.com/jeffdelara/mozo" target="_blank" rel="noopener">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card entrance">
+                        <div class="card-inner">
+                            <div class="project-header">
+                                <img src="images/chessgame.png" alt="Chess Game" class="project-thumb">
+                                <span class="mono-label">Chess Game</span>
+                            </div>
+                            <p class="project-desc">Complete chess game with all rules implemented in HTML/CSS and JavaScript.</p>
+                            <div class="project-links">
+                                <a href="https://chessgame-jeffdelara.netlify.app/" target="_blank" rel="noopener">Live ↗</a>
+                                <a href="https://github.com/jeffdelara/chessgame" target="_blank" rel="noopener">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card entrance">
+                        <div class="card-inner">
+                            <div class="project-header">
+                                <img src="images/tetris.png" alt="Tetris" class="project-thumb">
+                                <span class="mono-label">Tetris</span>
+                            </div>
+                            <p class="project-desc">A complete, fun game of Tetris built with vanilla JS and Canvas API.</p>
+                            <div class="project-links">
+                                <a href="https://tetris-jeffdelara.netlify.app/" target="_blank" rel="noopener">Live ↗</a>
+                                <a href="https://github.com/jeffdelara/tetris" target="_blank" rel="noopener">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card entrance">
+                        <div class="card-inner">
+                            <div class="project-header">
+                                <img src="images/tictactoe.png" alt="Tic Tac Toe" class="project-thumb">
+                                <span class="mono-label">Tic Tac Toe</span>
+                            </div>
+                            <p class="project-desc">Unbeatable AI using minmax algorithm and binary trees.</p>
+                            <div class="project-links">
+                                <a href="https://tictactoe-jeffdelara.netlify.app/" target="_blank" rel="noopener">Live ↗</a>
+                                <a href="https://github.com/jeffdelara/tictactoe" target="_blank" rel="noopener">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card card entrance">
+                        <div class="card-inner">
+                            <div class="project-header">
+                                <img src="images/gol.png" alt="Game of Life" class="project-thumb">
+                                <span class="mono-label">Game of Life</span>
+                            </div>
+                            <p class="project-desc">John Conway's Game of Life recreated using HTML/CSS and JavaScript.</p>
+                            <div class="project-links">
+                                <a href="https://gameoflife-jeffdelara.netlify.app/" target="_blank" rel="noopener">Live ↗</a>
+                                <a href="https://github.com/jeffdelara/game-of-life" target="_blank" rel="noopener">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" aria-labelledby="education-title">
+            <div class="container">
+                <span class="section-label mono-label">04 — education</span>
+                <h2 id="education-title" class="entrance">Education & Training</h2>
+
+                <div class="education-grid">
+                    <article class="card entrance">
+                        <div class="card-inner">
+                            <span class="mono-label">Degree</span>
+                            <h3 class="edu-title">BS Computer Engineering</h3>
+                            <p class="edu-school">Mapúa Institute of Technology</p>
+                            <span class="mono-label">2007</span>
+                        </div>
+                    </article>
+
+                    <article class="card entrance">
+                        <div class="card-inner">
+                            <span class="mono-label">Certification</span>
+                            <h3 class="edu-title">AWS Solutions Architect Associate</h3>
+                            <span class="mono-label">Present</span>
+                        </div>
+                    </article>
+
+                    <article class="card entrance">
+                        <div class="card-inner">
+                            <span class="mono-label">Certification</span>
+                            <h3 class="edu-title">Cisco Security Network & System Administration</h3>
+                            <span class="mono-label">2012</span>
+                        </div>
+                    </article>
+
+                    <article class="card entrance">
+                        <div class="card-inner">
+                            <span class="mono-label">Certification</span>
+                            <h3 class="edu-title">CCNA LAN/WAN Management</h3>
+                            <span class="mono-label">2011</span>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="socials">
-            <a href="https://github.com/jeffdelara" target="_blank"><i class='bx bxl-github'></i></a> 
-            <a href="https://www.linkedin.com/in/jeffreydelara/" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
-            <a href="http://twitter.com/jeffdlara" title="Twitter" target="_blank"><i class='bx bxl-twitter'></i></a>
-        </div>
-        <div class="mt">
-            &copy; 2021 All rights reserved. 
-        </div>
-    </footer>
-<script>
-    const works = [
-        {
-            image: 'images/cashflow-monitor.png', 
-            title: 'Cashmon.ph',
-            description: 'Cashmon allows you to track your income and expenses. Made with Ruby on Rails, tailwind and a touch of Stimulusjs.',
-            codeUrl: 'https://github.com/jeffdelara/cashmon',
-            codeDemo: 'https://www.cashmon.ph/'
-        },
-        {
-            image: 'images/howtoinvest.png', 
-            title: 'How to Invest for Beginners',
-            description: 'A learning management system, payment processing with Paymongo, Mailjet API and virtual stock trading game.',
-            codeUrl: false,
-            codeDemo: 'https://howtoinvestforbeginners.com/'
-        },
-        {
-            image: 'images/mozo.png', 
-            title: 'Mozo Video Conference App',
-            description: 'Mozo is a real-time video conferencing app. App is hosted on Heroku, please allow a few seconds for the site to spin up.',
-            codeUrl: 'https://github.com/jeffdelara/mozo',
-            codeDemo: 'https://mozoapp.herokuapp.com/'
-        },
-        {
-            image: 'images/chessgame.png', 
-            title: 'Chess Game',
-            description: 'A complete chess game with all the rules of chess created in HTML/CSS and Javascript.', 
-            codeUrl: 'https://github.com/jeffdelara/chessgame',
-            codeDemo: 'https://chessgame-jeffdelara.netlify.app/'
-        },
-        {
-            image: 'images/tetris.png', 
-            title: 'Tetris Game',
-            description: 'A complete, fun game of Tetris built with vanilla JS and Canvas API.', 
-            codeUrl: 'https://github.com/jeffdelara/tetris',
-            codeDemo: 'https://tetris-jeffdelara.netlify.app/'
-        },
-        {
-            image: 'images/tictactoe.png', 
-            title: 'Tic Tac Toe Unbeatable AI',
-            description: 'A tictactoe game with an Unbeatable AI that uses minmax algorithm and binary trees to win.', 
-            codeUrl: 'https://github.com/jeffdelara/tictactoe',
-            codeDemo: 'https://tictactoe-jeffdelara.netlify.app/'
-        },
-        {
-            image: 'images/gol.png', 
-            title: 'Game of Life',
-            description: 'Based on John Conway\'s game of life recreated using HTML/CSS and Javascript.', 
-            codeUrl: 'https://github.com/jeffdelara/game-of-life',
-            codeDemo: 'https://gameoflife-jeffdelara.netlify.app/'
-        },
-    ];
-
-    const workGrid = document.querySelector('.work-grid');
-    works.forEach( work => {
-        const workItem = document.createElement('div');
-        workItem.className = 'work-item';
-        let codeLink = `<a target="_blank" href="${work.codeUrl}"><i class='bx bxl-github' ></i> Code</a> </div>`;
-        
-        if(work.codeUrl === false) {
-            codeLink = `<div class="private"><i class='bx bx-lock-alt'></i> Code is private</div>`;
-        }
-
-        workItem.innerHTML = `
-        <a href="${work.codeDemo}" class="img-link" target="_blank">
-            <img src="${work.image}" alt="${work.title}">
-        </a>
-        <div class="work-container">
-            <h3>${work.title}</h3>
-            <div class="description">${work.description}</div>
-            <div class="mt work-links">
-                <a target="_blank" href="${work.codeDemo}"><i class='bx bx-link-external' ></i> Live</a> 
-                ${codeLink} 
-            </div>
-        </div>
-        `;
-        workGrid.append(workItem);
-    });
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
